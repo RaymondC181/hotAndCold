@@ -1,26 +1,11 @@
-
-let btn = document.getElementById("btn");
-let output = document.getElementById("output");
-let number = (Math.random() * 101)+1;
-
-
-function run()
+var x = parseInt((Math.random()*101) +1); 
+function fn1()
 {
-    let input = document.getElementById(userimput)
-    if (input == number)
-    {
-        output.innerhtml = "you gussed right, your number was $(number)"
-    }
-    if (input > number)
-    {
-        output.innerhtml = "you guessed too high"
-    }
-    else
-    {
-        output.innerhtml = "you guessed too low"
-    }
+    var str = document.getElementById("text1").value; 
+    console.log("Value inside text box is: " + str);
 }
 
-
-
-
+function initialize()
+{
+    console.log("random Number is " + x); 
+}
