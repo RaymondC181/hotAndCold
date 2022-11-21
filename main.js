@@ -1,37 +1,37 @@
-var x = parseInt((Math.random()*101) +1); 
+var x = parseInt((Math.random()*100) +1); 
 function fn1()
 {
-    var str = document.getElementById("text1").value; 
-    console.log("Value inside text box is: " + str);
-    if(str==x)
+    console.log("Input: " + myNumber);
+
+    if(myNumber==x)
     {
         console.log("You are correct");
     }
-    else if(str > (x-5) && str < (x+5))              //(x > low && x < high)
+    else if(myNumber > (x-5) && myNumber < (x+5))           
     {
         console.log("Very Hot");
     }
-    else if(str > (x-8) && str < (x+8))              
+    else if(myNumber > (x-8) && myNumber < (x+8))              
     {
         console.log("Hot");
     }
-    else if(str > (x-15) && str < (x+15))             
+    else if(myNumber > (x-15) && myNumber < (x+15))             
     {
         console.log("Very Warm");
     }
-    else if(str > (x-20) && str < (x+20))             
+    else if(myNumber > (x-20) && myNumber < (x+20))             
     {
         console.log("Warm");
     }
-    else if(str > (x-30) && str < (x+30))             
+    else if(myNumber > (x-30) && myNumber < (x+30))             
     {
         console.log("Cool");
     }
-    else if(str > (x-40) && str < (x+40))             
+    else if(myNumber > (x-40) && myNumber < (x+40))             
     {
         console.log("Very Cool");
     }
-    else if(str > (x-55) && str < (x+55))             
+    else if(myNumber > (x-55) && myNumber < (x+55))             
     {
         console.log("Cold");
     }
