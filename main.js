@@ -3,6 +3,15 @@ function fn1()
 {
     console.log("Input: " + myNumber);
 
+    if(document.getElementById("guesses").innerHTML==0)
+    {
+        alert("You ran out of turns");
+    }
+    else{
+        document.getElementById("guesses").innerHTML--; 
+    }
+
+
     if(myNumber==x)
     {
         console.log("You are correct");
