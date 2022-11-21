@@ -43,4 +43,37 @@ function fn1()
 function initialize()
 {
     console.log("random Number is " + x); 
+
+    numberOutput = document.getElementById("numberout");
+    negativeButton = document.getElementById("negativebtn");
+
+    myNumber = 50; 
+    negativesAllowed = false; 
+    display(); 
 }
+
+function addOne()
+{ 
+    if (!(myNumber>=100))
+    {
+        myNumber++;
+    }
+    display(); 
+}
+
+function subtractOne()
+{
+ myNumber--; 
+ if(myNumber<0)
+ {
+     myNumber = 0; 
+ }
+ display(); 
+}
+
+
+function display()
+{
+ numberOutput.innerHTML = myNumber; 
+}
+
