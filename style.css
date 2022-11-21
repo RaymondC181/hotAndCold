@@ -1,0 +1,25 @@
+.container{
+    text-align: center;
+    zoom:150%;
+    border: solid;
+    width: 500px;
+    height: 700px;
+    margin-left: 400px;
+    background-color: antiquewhite;
+}
+
+#numberout{
+    border: solid;
+    width: 50px;
+    margin-left: 220px;
+    margin-right: 220px;
+    background-color: white;
+}
+
+#log{
+    border: solid;
+    width: 50px;
+    margin-left: 220px;
+    margin-right: 220px;
+    background-color: white;
+}
