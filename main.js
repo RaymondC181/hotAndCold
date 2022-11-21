@@ -1,7 +1,7 @@
 var x = parseInt((Math.random()*100) +1); 
 function fn1()
 {
-    console.log("Input: " + myNumber);
+    console.log("Input: " + myNumber);     //<-- 
 
     if(document.getElementById("guesses").innerHTML==0)
     {
@@ -51,7 +51,7 @@ function fn1()
 
 function initialize()
 {
-    console.log("random Number is " + x); 
+    console.log("random Number is " + x);    //<-- 
 
     numberOutput = document.getElementById("numberout");
     negativeButton = document.getElementById("negativebtn");
@@ -86,3 +86,9 @@ function display()
  numberOutput.innerHTML = myNumber; 
 }
 
+function reset()
+{
+    document.getElementById("guesses").innerHTML=5;
+    x = parseInt((Math.random()*100) +1);
+    console.log("random Number is " + x);    //<--
+}
