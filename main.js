@@ -6,6 +6,7 @@ function fn1()
     if(document.getElementById("guesses").innerHTML==0)
     {
         alert("You ran out of turns");
+        reset();
     }
     else{
         document.getElementById("guesses").innerHTML--; 
@@ -14,38 +15,38 @@ function fn1()
 
     if(myNumber==x)
     {
-        console.log("You are correct");
+        document.getElementById("log").innerHTML += "You are correct" ;
     }
     else if(myNumber > (x-5) && myNumber < (x+5))           
     {
-        console.log("Very Hot");
+        document.getElementById("log").innerHTML += "Very Hot" ;
     }
     else if(myNumber > (x-8) && myNumber < (x+8))              
     {
-        console.log("Hot");
+        document.getElementById("log").innerHTML += "Hot" ;
     }
     else if(myNumber > (x-15) && myNumber < (x+15))             
     {
-        console.log("Very Warm");
+        document.getElementById("log").innerHTML += "Very Warm" ;
     }
     else if(myNumber > (x-20) && myNumber < (x+20))             
     {
-        console.log("Warm");
+        document.getElementById("log").innerHTML += "Warm" ;
     }
     else if(myNumber > (x-30) && myNumber < (x+30))             
     {
-        console.log("Cool");
+        document.getElementById("log").innerHTML += "Cool" ;
     }
     else if(myNumber > (x-40) && myNumber < (x+40))             
     {
-        console.log("Very Cool");
+        document.getElementById("log").innerHTML += "Very Cool" ;
     }
     else if(myNumber > (x-55) && myNumber < (x+55))             
     {
-        console.log("Cold");
+        document.getElementById("log").innerHTML += "Cold" ;
     }
     else{
-        console.log("Very Cold");
+        document.getElementById("log").innerHTML += "Very Cold" ;
     }
 }
 
@@ -88,7 +89,68 @@ function display()
 
 function reset()
 {
+    console.clear();
     document.getElementById("guesses").innerHTML=5;
     x = parseInt((Math.random()*100) +1);
-    console.log("random Number is " + x);    //<--
+    document.getElementById("log").innerHTML = "";
+    initialize(); 
 }
+
+function addFive()
+{ 
+    if (!(myNumber>=100))
+    {
+        myNumber+=5;
+    }
+    display(); 
+}
+
+function subtractFive()
+{
+ myNumber-=5; 
+ if(myNumber<0)
+ {
+     myNumber = 0; 
+ }
+ display(); 
+}
+
+function addTen()
+{ 
+    if (!(myNumber>=100))
+    {
+        myNumber+=10;
+    }
+    display(); 
+}
+
+function subtractTen()
+{
+ myNumber-=10; 
+ if(myNumber<0)
+ {
+     myNumber = 0; 
+ }
+ display(); 
+}
+
+function add25()
+{ 
+    if (!(myNumber>=100))
+    {
+        myNumber+=25;
+    }
+    display(); 
+}
+
+function subtract25()
+{
+ myNumber-=25; 
+ if(myNumber<0)
+ {
+     myNumber = 0; 
+ }
+ display(); 
+}
+
+
